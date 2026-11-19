@@ -1,0 +1,58 @@
+{
+  "name": "bcv-fx",
+  "version": "1.0.2",
+  "description": "Ligera y sin dependencias, para consultar el tipo de cambio de referencia publicado por el Banco Central de Venezuela, mediante web scraping.",
+  "keywords": [
+    "bcv",
+    "fx",
+    "dolar",
+    "euro",
+    "banco-central",
+    "venezuela",
+    "tasas",
+    "tasas-bcv",
+    "bcv-rates",
+    "bcv-fx",
+    "divisas",
+    "currency",
+    "exchange-rates",
+    "foreign-exchange"
+  ],
+  "homepage": "https://github.com/imalescript/bcv-fx#readme",
+  "bugs": {
+    "url": "https://github.com/imalescript/bcv-fx/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imalescript/bcv-fx.git"
+  },
+  "license": "MIT",
+  "author": "alescript",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test \"test/*.unit.test.ts\"",
+    "test:live": "node --test \"test/*.live.test.ts\"",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=\"src/**\" \"test/*.unit.test.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
